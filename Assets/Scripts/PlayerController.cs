@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     public float gravity = -9.81f;
     bool isGrounded;
 
-    private Vector3 velocity;
+    public Vector3 velocity;
     private Vector3 move;
     public LayerMask Ground;
     private Transform groundChecker;
@@ -43,33 +43,41 @@ public class PlayerController : MonoBehaviour
     {
         bool jump;
         bool run;
+        bool crouch;
 
         jump = Input.GetButton("Jump");
         run = Input.GetKey(KeyCode.LeftShift);
+        crouch = Input.GetKey(KeyCode.LeftControl);
 
         cc.Move(velocity * Time.deltaTime);
 
         if (isGrounded)
         {
-          Debug.Log("is grounded");
+          //Debug.Log("is grounded");
             Move();
 
             if (jump)
             {
-                velocity.y = Mathf.Sqrt(jumpSpeed * -2f * gravity);
+                velocity.y = Mathf.Sqrt(jumpSpeed  * gravity);
             }
             if (run)
             {
                 movespeed = 20f;
             }
+            else if (crouch)
+            {
+                transform.localScale = new Vector3(1, 0.5f, 1);
+                movespeed = 5;
+            }
             else
             {
+                transform.localScale = new Vector3(1, 1, 1);
                 movespeed = 10f;
             }
         }
         else
         {
-            Debug.Log("is not grounded");
+            //Debug.Log("is not grounded");
             AirMove();
         }
     }
@@ -83,5 +91,4 @@ public class PlayerController : MonoBehaviour
     {
         cc.Move(move * movespeed/1.5f * Time.deltaTime);
     }
-
 }
