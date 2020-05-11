@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float jumpSpeed;
     public float gravity = -9.81f;
     bool isGrounded;
+    bool crouched;
 
     public Vector3 velocity;
     private Vector3 move;
@@ -20,16 +21,13 @@ public class PlayerController : MonoBehaviour
     {
         cc = GetComponent<CharacterController>();
         groundChecker = transform.GetChild(0);
+        crouched = false;
     }
 
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundChecker.position, GroundDistance, Ground, QueryTriggerInteraction.Ignore);
 
-        if(isGrounded && velocity.y < 0)
-        {
-            velocity.y = -2;
-        }
 
         float hInput = Input.GetAxis("Horizontal");
         float vInput = Input.GetAxis("Vertical");
@@ -37,19 +35,23 @@ public class PlayerController : MonoBehaviour
         move = transform.right * hInput + transform.forward * vInput;
 
         velocity.y += gravity * Time.deltaTime;
+        Crouch();
     }
 
     private void FixedUpdate()
     {
         bool jump;
         bool run;
-        bool crouch;
 
-        jump = Input.GetButton("Jump");
+        jump = Input.GetKey(KeyCode.Space);
         run = Input.GetKey(KeyCode.LeftShift);
-        crouch = Input.GetKey(KeyCode.LeftControl);
 
         cc.Move(velocity * Time.deltaTime);
+
+        if (isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2;
+        }
 
         if (isGrounded)
         {
@@ -58,20 +60,14 @@ public class PlayerController : MonoBehaviour
 
             if (jump)
             {
-                velocity.y = Mathf.Sqrt(jumpSpeed  * gravity);
+                velocity.y = Mathf.Sqrt(jumpSpeed * -2 * gravity);
             }
             if (run)
             {
-                movespeed = 20f;
-            }
-            else if (crouch)
-            {
-                transform.localScale = new Vector3(1, 0.5f, 1);
-                movespeed = 5;
+                movespeed = 16f;
             }
             else
             {
-                transform.localScale = new Vector3(1, 1, 1);
                 movespeed = 10f;
             }
         }
@@ -90,5 +86,23 @@ public class PlayerController : MonoBehaviour
     private void AirMove()
     {
         cc.Move(move * movespeed/1.5f * Time.deltaTime);
+    }
+
+    private void Crouch()
+    {
+        //Debug.Log($"crouched: {crouched}");
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            crouched = !crouched;
+        }
+        if (crouched)
+        {
+            transform.localScale = new Vector3(1, 0.4f, 1);
+            movespeed = 5;
+        }
+        else if(!crouched)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1629381698}
   - component: {fileID: 1629381697}
   - component: {fileID: 1629381696}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629381695}
   m_LocalRotation: {x: 0.00667088, y: -0, z: -0, w: 0.9999778}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0.0099983215}
+  m_LocalPosition: {x: 0, y: 0.601, z: -0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7984362466642481078}
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5314410846910381228}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: checker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 9205209880777206429}
   - component: {fileID: 2235627562201661235}
   - component: {fileID: 6920502274411421570}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}

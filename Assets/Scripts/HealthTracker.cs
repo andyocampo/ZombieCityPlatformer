@@ -14,17 +14,19 @@ public class HealthTracker : MonoBehaviour
         healthText = Text.GetComponent<TextMeshProUGUI>();
     }
 
-    void Update()
-    {
-        
-    }
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionStay(Collision collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
             health--;
             healthText.text = $"Health: {health}";
+            if(health <= 0)
+            {
+                GetComponent<PlayerController>().enabled = false;
+                GetComponentInChildren<PlayerLook>().enabled = false;
+                health = 0;
+                healthText.text = $"Health: {health} GAME OVER";
+            }
         }
     }
 
