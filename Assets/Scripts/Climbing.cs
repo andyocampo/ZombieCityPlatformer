@@ -5,9 +5,11 @@ using UnityEngine;
 public class Climbing : MonoBehaviour
 {
     bool inside = false;
-    float climbSpeed = 15;
+    float climbSpeed = 11;
 
+    public LayerMask Climb;
     private CharacterController pc;
+    private GameObject hitObject;
 
     void Start()
     {
@@ -32,6 +34,7 @@ public class Climbing : MonoBehaviour
 
     void FixedUpdate()
     {
+
         bool climb = Input.GetKey(KeyCode.Space);
 
         if (inside == true && climb)
@@ -40,4 +43,5 @@ public class Climbing : MonoBehaviour
             pc.Move(Vector3.up * climbSpeed * Time.smoothDeltaTime);
         }
     }
+
 }

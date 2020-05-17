@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
         if (isGrounded && velocity.y < 0)
         {
-            velocity.y = -2;
+           velocity.y = -1;
         }
 
         if (isGrounded)
@@ -64,11 +64,11 @@ public class PlayerController : MonoBehaviour
             }
             if (run)
             {
-                movespeed = 16f;
+                movespeed = 17f;
             }
             else
             {
-                movespeed = 10f;
+                movespeed = 12f;
             }
         }
         else
@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
         if (crouched)
         {
             transform.localScale = new Vector3(1, 0.4f, 1);
-            movespeed = 5;
+            movespeed = 6;
         }
         else if(!crouched)
         {

@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - Enemy
   - Key
+  - Tut
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - 
   - Ground
   - Player
-  - 
-  - 
+  - Climb
+  - Enemy
   - 
   - 
   - 
