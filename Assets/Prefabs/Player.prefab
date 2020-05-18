@@ -57,7 +57,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 600
   field of view: 80
   orthographic: 0
   orthographic size: 5
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2642fb30c9d24d347a444224a0476a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 150
+  mouseSensitivity: 125
   body: {fileID: 7984362466642481078}
 --- !u!1 &381298570732774799
 GameObject:
@@ -122,7 +122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 381298570732774799}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: 0, y: -1.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7984362466642481078}
@@ -241,8 +241,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GroundDistance: 0.2
-  movespeed: 10
-  jumpSpeed: 10
+  movespeed: 12
+  jumpSpeed: 5.25
   gravity: -19.62
   velocity: {x: 0, y: 0, z: 0}
   Ground:
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Climb:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
 --- !u!114 &2235627562201661235
 MonoBehaviour:
   m_ObjectHideFlags: 0

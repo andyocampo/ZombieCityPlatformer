@@ -23,7 +23,7 @@ public class Tutorial : MonoBehaviour
         switch (this.gameObject.name)
         {
             case "Sign 0":
-                tutorial.text = "Press WASD to move around";
+                tutorial.text = "Press WASD to move around\nHold LEFT SHIFT to run";
                 Text.SetActive(true);
                 break;
 

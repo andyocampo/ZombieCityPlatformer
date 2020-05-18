@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7679961077522898855}
   - component: {fileID: 3989049110963598711}
   - component: {fileID: 6725650223772015124}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: legRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1554435073193076893}
   - component: {fileID: 1554435073193076894}
   - component: {fileID: -5211937880708411139}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ Transform:
   m_GameObject: {fileID: 1554435073193076895}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 35.8, y: 1.22, z: 17.49}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.24, y: 1.24, z: 1.24}
   m_Children:
   - {fileID: 557399701758734794}
   - {fileID: 5184783815049994540}
@@ -173,9 +173,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 2.2292895
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.114644535, z: 0}
 --- !u!54 &1554435073193076894
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 5877280719264495163}
   - component: {fileID: 5451698777868030837}
   - component: {fileID: 2801163492541457236}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -305,7 +305,7 @@ GameObject:
   - component: {fileID: 5040741355548894974}
   - component: {fileID: 7075618855775469645}
   - component: {fileID: 492319576197069700}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: armRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 8733653364666333186}
   - component: {fileID: 1809122655863128637}
   - component: {fileID: 3594642069756952892}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: legLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +475,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5184783815049994540}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 6732090331139745978}
   - component: {fileID: 5401300825731822871}
   - component: {fileID: 387067830598862986}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: radiusChecker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -531,7 +531,7 @@ Transform:
   m_GameObject: {fileID: 6593170876538392084}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0000038147, y: -0.00017762, z: 0.0000019073}
-  m_LocalScale: {x: 158.13716, y: 158.1372, z: 158.13716}
+  m_LocalScale: {x: 56.509872, y: 56.509888, z: 56.509872}
   m_Children: []
   m_Father: {fileID: 1554435073193076890}
   m_RootOrder: 0
@@ -619,7 +619,7 @@ GameObject:
   - component: {fileID: 8389919689929052378}
   - component: {fileID: 6126419425385816914}
   - component: {fileID: 763809240466718985}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: armLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -712,7 +712,7 @@ GameObject:
   - component: {fileID: 6916094183797427436}
   - component: {fileID: 1452802513003646485}
   - component: {fileID: 4335433013252584799}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}

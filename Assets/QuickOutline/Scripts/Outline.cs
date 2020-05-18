@@ -2,7 +2,7 @@
 //  Outline.cs
 //  QuickOutline
 //
-//  Created by Chris Nolet on 3/30/18.
+//  Created by Chris Nolet on 3/30/18. // FREE CODE I BORROWED FOR OUTLINE!!
 //  Copyright © 2018 Chris Nolet. All rights reserved.
 //
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Climbing : MonoBehaviour
 {
     bool inside = false;
-    float climbSpeed = 11;
+    float climbSpeed = 10;
 
     public LayerMask Climb;
     private CharacterController pc;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class HealthTracker : MonoBehaviour
@@ -9,9 +10,12 @@ public class HealthTracker : MonoBehaviour
 
     [SerializeField] GameObject Text;
     TextMeshProUGUI healthText;
+    Scene scene;
+
     void Start()
     {
         healthText = Text.GetComponent<TextMeshProUGUI>();
+        scene = SceneManager.GetActiveScene();
     }
 
     private void OnCollisionStay(Collision collision)
@@ -25,7 +29,11 @@ public class HealthTracker : MonoBehaviour
                 GetComponent<PlayerController>().enabled = false;
                 GetComponentInChildren<PlayerLook>().enabled = false;
                 health = 0;
-                healthText.text = $"Health: {health} GAME OVER";
+                healthText.text = $"Health: {health} GAME OVER. Press R to restart";
+                if (Input.GetKeyDown(KeyCode.R))
+                {
+                    SceneManager.LoadScene(scene.buildIndex);
+                }
             }
         }
     }
